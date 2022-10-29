@@ -29,7 +29,7 @@ int main()
     {
         cin>>a[i];
     }
-    sort(a,a+n);
+   
     RemoveDuplicates(a,n);
     return 0;
 }
