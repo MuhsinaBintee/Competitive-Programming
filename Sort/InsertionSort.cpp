@@ -1,42 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void insertionSort(int a[],int n)
-{
-    int key,j;
-    for(int i=1; i<n; i++)
-    {
-        key=a[i];
-        for(j=i-1; j>=0; j--)
-        {
-            if(key<a[j])
-            {
-                a[j+1]=a[j];
-            }
-            else
-            {
-                break;
-            }
-        }
-        a[j+1]=key;
+void insertionSort(int *A,int n){
+   for(int i=1;i<n;i++){
+   int value=A[i];
+    int hole=i;
+    while(hole>0 && A[hole-1]>value){
+        A[hole]=A[hole-1];
+        hole = hole-1;
     }
-    for(int i=0; i<n; i++)
-    {
-        cout<<a[i]<<" ";
-    }
+    A[hole]=value;
+   }
 
 }
 
 int main()
 {
-    int l;
+    /*int l;
     cin>>l;
     int a[l];
     for(int i=0; i<l; i++)
     {
         cin>>a[i];
+    }*/
+    int A[]={7,2,4,1,5,3};
+    int n= sizeof(A)/sizeof(A[0]);
+    insertionSort(A,n);
+    for(int i=0;i<n;i++){
+     cout<<A[i]<<" ";
     }
-//int n=sizeof(a)/sizeof(a[0]);
-    insertionSort(a,l);
+
     return 0;
 }
