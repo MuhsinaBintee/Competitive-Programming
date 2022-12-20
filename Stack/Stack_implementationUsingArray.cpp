@@ -44,5 +44,6 @@ int main(){
     top();
     print();
     push(12);
+    print();
 
 }
