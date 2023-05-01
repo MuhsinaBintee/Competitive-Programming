@@ -22,7 +22,7 @@ return total;
 */
 //metod:03
 /*int getMissing(int a[],int n){
-int right=0,left=n,mid;
+int right=n,left=0,mid;
 //sort(a,a+n);
 while(left<right){
         mid = (left + right)/2;
