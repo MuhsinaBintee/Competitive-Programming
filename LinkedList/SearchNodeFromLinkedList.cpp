@@ -42,7 +42,7 @@ int SearchNode(int item){
     temp=temp->next;
     index++;
   }
-  return 0;
+  return -1;
 }
 int main(){
 int n;
